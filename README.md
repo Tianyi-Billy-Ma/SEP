@@ -14,7 +14,9 @@ In this project, we will leverage the **National Health and Nutrition Examinatio
 The link is [NHANES](https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Questionnaire&CycleBeginYear=2011).
 
 
-Notes
+Guidelines
 =========
-* All codes should put in YOURFOLDER/src/.
+* All codes should put in YOURFOLDER/src/. Please make sure to upload your code at the end of everyday. 
+* You should upload your code under your own branch, i.e., NDID (I already create these branches that for you). 
+* All daily summary/report should go in YOURFOLDER/Daily/.
 * Our meeting will hold via ZOOM [here](https://notredame.zoom.us/my/billyma3).
