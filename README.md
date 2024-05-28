@@ -18,5 +18,5 @@ Guidelines
 =========
 * All codes should put in YOURFOLDER/src/. Please make sure to upload your code at the end of everyday. 
 * You should upload your code under your own branch, i.e., NDID (I already create these branches that for you). 
-* All daily summary/report should go in YOURFOLDER/Daily/.
+* All daily summary/report should go in YOURFOLDER/Daily/. I create a template in markdown, but if you prefer txt/doc, feel free to change it.
 * Our meeting will hold via ZOOM [here](https://notredame.zoom.us/my/billyma3).
