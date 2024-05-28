@@ -16,5 +16,5 @@ The link is [NHANES](https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Compo
 
 Notes
 =========
-* All codes should put in <YOURFOLDER>/src/.
+* All codes should put in YOURFOLDER/src/.
 * Our meeting will hold via ZOOM [here](https://notredame.zoom.us/my/billyma3).
