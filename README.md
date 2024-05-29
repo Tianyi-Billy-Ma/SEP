@@ -7,7 +7,7 @@ Opioid Misuse Detection with Dietary Pattern
 Research Mentor: [Tianyi (Billy) Ma](https://tianyi-billy-ma.github.io/)
 
 Students:
-**TODO: Add your name and your personal website (if you have) here.**
+[Jack Mangione](https://j-mango-19.github.io/personal-site/)
 
 
 In this project, we will leverage the **National Health and Nutrition Examination Survey**, providied by CDC.
