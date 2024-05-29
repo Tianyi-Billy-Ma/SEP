@@ -6,7 +6,7 @@ Opioid Misuse Detection with Dietary Pattern
 
 Research Mentor: [Tianyi (Billy) Ma](https://tianyi-billy-ma.github.io/)
 
-Students:
+Students: Leonardo Molina 
 **TODO: Add your name and your personal website (if you have) here.**
 
 
