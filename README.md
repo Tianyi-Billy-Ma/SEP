@@ -23,6 +23,11 @@ Guidelines
 * Our meeting will hold via ZOOM [here](https://notredame.zoom.us/my/billyma3).
 
 
+Research Problems
+=========
+* How can we leverage dietary data to identify users with potential opioid misuse.
+* How can we enhance the understanding of both known and less-known dietary patterns associated with opioid misuse?
+
 Timelines
 =========
 
