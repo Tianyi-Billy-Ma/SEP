@@ -7,7 +7,6 @@ file_path = "C:/Users/16822/OneDrive/Data Files for SER/2017_2020_NHANES.XPT"
 df = pd.read_sas(file_path, format='xport')
 
 
-
 # print the first six rows of the data frame and contine to the last row 
 print(df.iloc[:,:6])
 print(df.iloc[:, 7:13])
