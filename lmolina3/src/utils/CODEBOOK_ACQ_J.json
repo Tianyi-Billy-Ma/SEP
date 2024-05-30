@@ -1,0 +1,265 @@
+{
+    "Component Description": {
+        "Description": "The Acculturation section (variable name prefix ACQ) provides personal interview data on language use in the home. Questions asked and response categories used were customized, based on self-identified race and Hispanic origin, as shown in the table below.",
+        "Table": {
+            "Participants' Self-Identification": [
+                "Non-Hispanic white, Non-Hispanic black, or other race - including multi-racial",
+                "Mexican American or other Hispanic",
+                "Non-Hispanic Asian"
+            ],
+            "Question Asked": [
+                "What language(s) do you usually speak at home?",
+                "What language(s) do you usually speak at home? Do you speak only Spanish, more Spanish than English, both equally, more English than Spanish, or only English?",
+                "Do you speak only (NON-ENGLISH LANGUAGE), more (NON-ENGLISH LANGUAGE) than English, both equally, more English than (NON-ENGLISH LANGUAGE), or only English?\n\r\n            Note: Participant self-reported \"NON-ENGLISH LANGUAGE\" used at home is pre-filled in this question during the interview."
+            ],
+            "Response Categories": [
+                "Check all that apply:\nEnglish (ACD011A)\nSpanish (ACD011B)\nOther languages (ACD011C)",
+                "Only Spanish\nMore Spanish than English\nBoth equally\nMore English than Spanish\nOnly English",
+                "Only non-English language\nMore non-English than English\nBoth equally\nMore English than non-English language\nOnly English"
+            ],
+            "Variable Name for Data Release": [
+                "ACD011A-C",
+                "ACD040",
+                "ACD110"
+            ]
+        }
+    },
+    "Data Processsing and Editing": {
+        "Description": "Edits were made to ensure the completeness, consistency and analytic usefulness of the data."
+    },
+    "Codebook and Frequencies": {
+        "SEQN": {
+            "Title": "Respondent sequence number",
+            "Variable Name:": "SEQN",
+            "SAS Label:": "Respondent sequence number",
+            "English Text:": "Respondent sequence number.",
+            "Target:": "Both males and females 3 YEARS - 150 YEARS"
+        },
+        "ACQBOX1": {
+            "Title": "CHECK ITEM",
+            "Variable Name:": "ACQBOX1",
+            "English Instructions:": "BOX 1. CHECK ITEM: IF THE PARTICIPANT SELF-IDENTIFIED AS \"MEXICAN AMERICAN\" OR \"OTHER HISPANIC\" (i.e., RIDRETH3=1, OR 2), GO TO ACD040;  IF THE PARTICIPANT SELF-IDENTIFIED AS \"NON-HISPANIC ASIAN\" (i.e., RIDRETH3=6), GO TO ACD110;  IF THE PARTICIPANT SELF-IDENTIFIED AS \"NON-HISPANIC WHITE\", \"NON-HISPANIC BLACK\", OR \"OTHER RACE - INCLUDING MULTI-RACIAL\" (i.e., RIDRETH3=3, 4, OR 7), CONTINUE WITH ACD011A.",
+            "Target:": "Both males and females 3 YEARS - 150 YEARS"
+        },
+        "ACD011A": {
+            "Title": "Speak English at home",
+            "Variable Name:": "ACD011A",
+            "SAS Label:": "Speak English at home - NHW or NHB",
+            "English Text:": "What language(s) {do you/does SP} usually speak at home?",
+            "English Instructions:": "CODE ALL THAT APPLY.\rTHIS VARIABLE ONLY APPLIES TO PARTICIPANTS SELF-IDENTIFIED AS \"NON-HISPANIC WHITE\", \"NON-HISPANIC BLACK\", OR \"OTHER RACE - INCLUDING MULTI-RACIAL\" (i.e., RIDRETH3=3, 4, OR 7).",
+            "Target:": "Both males and females 3 YEARS - 150 YEARS",
+            "Table:": {
+                "Code or Value": [
+                    "1",
+                    "77",
+                    "99",
+                    "."
+                ],
+                "Value Description": [
+                    "English",
+                    "Refused",
+                    "Don't know",
+                    "Missing"
+                ],
+                "Count": [
+                    "5230",
+                    "0",
+                    "0",
+                    "3191"
+                ],
+                "Cumulative": [
+                    "5230",
+                    "5230",
+                    "5230",
+                    "8421"
+                ],
+                "Skip to Item": [
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        "ACD011B": {
+            "Title": "Speak Spanish at home",
+            "Variable Name:": "ACD011B",
+            "SAS Label:": "Speak Spanish at home - NHW or NHB",
+            "English Text:": "What language(s) {do you/does SP} usually speak at home?",
+            "English Instructions:": "CODE ALL THAT APPLY.\rTHIS VARIABLE ONLY APPLIES TO PARTICIPANTS SELF-IDENTIFIED AS \"NON-HISPANIC WHITE\", \"NON-HISPANIC BLACK\", OR \"OTHER RACE - INCLUDING MULTI-RACIAL\" (i.e., RIDRETH3=3, 4, OR 7).",
+            "Target:": "Both males and females 3 YEARS - 150 YEARS",
+            "Table:": {
+                "Code or Value": [
+                    "8",
+                    "."
+                ],
+                "Value Description": [
+                    "Spanish",
+                    "Missing"
+                ],
+                "Count": [
+                    "16",
+                    "8405"
+                ],
+                "Cumulative": [
+                    "16",
+                    "8421"
+                ],
+                "Skip to Item": [
+                    "",
+                    ""
+                ]
+            }
+        },
+        "ACD011C": {
+            "Title": "Speak other language at home",
+            "Variable Name:": "ACD011C",
+            "SAS Label:": "Speak other language at home -NHW or NHB",
+            "English Text:": "What language(s) {do you/does SP} usually speak at home?",
+            "English Instructions:": "CODE ALL THAT APPLY.\rTHIS VARIABLE ONLY APPLIES TO PARTICIPANTS SELF-IDENTIFIED AS \"NON-HISPANIC WHITE\", \"NON-HISPANIC BLACK\", OR \"OTHER RACE - INCLUDING MULTI-RACIAL\" (i.e., RIDRETH3=3, 4, OR 7).",
+            "Target:": "Both males and females 3 YEARS - 150 YEARS",
+            "Table:": {
+                "Code or Value": [
+                    "9",
+                    "."
+                ],
+                "Value Description": [
+                    "Other",
+                    "Missing"
+                ],
+                "Count": [
+                    "159",
+                    "8262"
+                ],
+                "Cumulative": [
+                    "159",
+                    "8421"
+                ],
+                "Skip to Item": [
+                    "",
+                    ""
+                ]
+            }
+        },
+        "ACD040": {
+            "Title": "Language(s) spoken at home",
+            "Variable Name:": "ACD040",
+            "SAS Label:": "Language(s) spoken at home - Hispanics",
+            "English Text:": "Now I'm going to ask you about language use.\rWhat language(s) {do you/does SP} usually speak at home?  {Do you/Does he/Does she} speak only Spanish, more Spanish than English, both equally, more English than Spanish, or only English?",
+            "English Instructions:": "HAND CARD ACQ1.\rTHIS VARIABLE ONLY APPLIES TO PARTICIPANTS SELF-IDENTIFIED AS \"MEXICAN AMERICAN\" OR \"OTHER HISPANIC\" (i.e., RIDRETH3=1, OR 2).",
+            "Target:": "Both males and females 3 YEARS - 150 YEARS",
+            "Table:": {
+                "Code or Value": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "7",
+                    "9",
+                    "."
+                ],
+                "Value Description": [
+                    "Only Spanish,",
+                    "More Spanish than English",
+                    "Both equally",
+                    "More English than Spanish",
+                    "Only English",
+                    "Refused",
+                    "Don't know",
+                    "Missing"
+                ],
+                "Count": [
+                    "529",
+                    "322",
+                    "334",
+                    "353",
+                    "414",
+                    "2",
+                    "3",
+                    "6464"
+                ],
+                "Cumulative": [
+                    "529",
+                    "851",
+                    "1185",
+                    "1538",
+                    "1952",
+                    "1954",
+                    "1957",
+                    "8421"
+                ],
+                "Skip to Item": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        },
+        "ACD110": {
+            "Title": "Language(s) spoken at home",
+            "Variable Name:": "ACD110",
+            "SAS Label:": "Language(s) spoken at home - Asians",
+            "English Text:": "{Do you/Does SP} speak only (NON-ENGLISH LANGUAGE), more (NON-ENGLISH LANGUAGE) than English, both equally, more English than (NON-ENGLISH LANGUAGE), or only English?",
+            "English Instructions:": "THIS VARIABLE ONLY APPLIES TO PARTICIPANTS SELF-IDENTIFIED \"NON-HISPANIC ASIAN\" (i.e., RIDRETH3=6).",
+            "Target:": "Both males and females 3 YEARS - 150 YEARS",
+            "Table:": {
+                "Code or Value": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "7",
+                    "9",
+                    "."
+                ],
+                "Value Description": [
+                    "Only Non-English language",
+                    "More Non-English than English",
+                    "Both equally",
+                    "More English than Non-English",
+                    "Only English",
+                    "Refused",
+                    "Don't know",
+                    "Missing"
+                ],
+                "Count": [
+                    "439",
+                    "107",
+                    "124",
+                    "134",
+                    "327",
+                    "0",
+                    "0",
+                    "7290"
+                ],
+                "Cumulative": [
+                    "439",
+                    "546",
+                    "670",
+                    "804",
+                    "1131",
+                    "1131",
+                    "1131",
+                    "8421"
+                ],
+                "Skip to Item": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        }
+    }
+}
