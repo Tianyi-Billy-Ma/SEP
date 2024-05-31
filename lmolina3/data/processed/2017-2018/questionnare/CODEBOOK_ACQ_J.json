@@ -10,7 +10,7 @@
             "Question Asked": [
                 "What language(s) do you usually speak at home?",
                 "What language(s) do you usually speak at home? Do you speak only Spanish, more Spanish than English, both equally, more English than Spanish, or only English?",
-                "Do you speak only (NON-ENGLISH LANGUAGE), more (NON-ENGLISH LANGUAGE) than English, both equally, more English than (NON-ENGLISH LANGUAGE), or only English?\n\r\n            Note: Participant self-reported \"NON-ENGLISH LANGUAGE\" used at home is pre-filled in this question during the interview."
+                "Do you speak only (NON-ENGLISH LANGUAGE), more (NON-ENGLISH LANGUAGE) than English, both equally, more English than (NON-ENGLISH LANGUAGE), or only English?\n\nNote: Participant self-reported \"NON-ENGLISH LANGUAGE\" used at home is pre-filled in this question during the interview."
             ],
             "Response Categories": [
                 "Check all that apply:\nEnglish (ACD011A)\nSpanish (ACD011B)\nOther languages (ACD011C)",
