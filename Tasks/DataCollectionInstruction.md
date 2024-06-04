@@ -93,6 +93,8 @@ pictures = {
 keywords = {
     "keyword_id": Keyword_Structure,
 }
+#relation.json
+relations = [Relation_Structure]
 
 ```    
 
