@@ -34,24 +34,25 @@ User_Structure = {
     "followers": ["user_id1", "user_id2", "user_id3", ...],
     "followees": ["user_id1", "user_id2", "user_id3", ....],
     "profile_pic": "xxxxx.jpg",
+    "profile_text: str,
     "posts": ["post_id1", "post_id2", ...]  ,
-    "keywords": [ str, str, str, ... ] 
+    "keywords": [ keyword_id1, keyword_id2, keyword_id3, ... ] 
 }
 Post_Structure = {
      "user_id": str,
     "post_id": str,
     "user_comment": str,
-    "pic": "xxxxx.jpg",
+    "pic_id": "pic_id1",
     "liked_users": [ "user_id1", "user_id2", "user_id3", ...],
     "comments": ["comment_id1", "comment_id2", "comment_id3", ... ],
-    "keywords": [str, str, str, ...],
+    "keywords": [keyword_id1, keyword_id2, keyword_id3, ...],
 }
 Comment_Structure = {
     "comment_id": str,
     "user_id": str,
     "post_id": str,
     "comment": str,
-    "keywords": [str, str, str, ...],
+    "keywords": [keyword_id1, keyword_id2, keyword_id3, ...],
 }
 Picture_Structure = {
     "pic_id": str,
