@@ -3,3 +3,4 @@ logs/
 **/__pychache__/
 **/*.pyc
 __pychache__/
+/jmangion/src/instagrapi/login.txt
