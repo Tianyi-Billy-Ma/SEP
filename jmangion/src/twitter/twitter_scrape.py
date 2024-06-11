@@ -87,12 +87,10 @@ def get_user_followers(client, user, relations, max_followers):
     if num_followers > max_followers:
         num_followers = max_followers
     #followers_list = user.get_followers(num_followers) # this function returns twikit.User objects
-    if num_followers > 0:
-        #followers_list = user.get_followers(num_followers)
-        followers_list = client.get_user_followers(user.id, num_followers)
-        #followers_list = client.get_user_followers(user.id, num_followers)
-    else:
-        followers_list = []
+    #followers_list = user.get_followers(num_followers)
+    followers_list = client.get_user_followers(user.id, num_followers)
+    followers_list = followers_list[:num_followers] # Manually limit the number of folowees to store (twikit fxn fails to do this)
+    #followers_list = client.get_user_followers(user.id, num_followers)
     followers_id_list = []
     for follower_user in followers_list:
         followers_id_list.append(follower_user.id)
@@ -109,6 +107,7 @@ def get_user_followees(client, user, relations, max_followees):
     if num_followees > max_followees:
         num_followees = max_followees
     followees_list = client.get_user_following(user.id, num_followees) # this function returns twikit.User objects
+    followees_list = followees_list[:num_followees] # Manually limit the number of folowees to store (twikit fxn fails to do this)
     followees_id_list = []
     for followee_user in followees_list:
         followees_id_list.append(followee_user.id)
@@ -206,6 +205,11 @@ def deal_with_rate_limits(profile):
     time.sleep(random.randint(1, 3))
     return profile
 
+def record_completion_time(filename):
+    completion_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    with open(filename, "a") as file:
+        file.write(f"Program completed at: {completion_time}\n")
+
 
 def main():
     """
@@ -237,10 +241,10 @@ def main():
         print(drug, end =', ')
 
     # Change the query each time to match the drug to be searched
-    query = "marijuana"
-    print(f"Drug being searched this time: {query}")
+    query = "shrooms"
+    print(f"\nDrug being searched this time: {query}")
     time.sleep(random.randint(2, 10)) # waiting a bit to evade bot detection
-    users_to_scrape = 10
+    users_to_scrape = 15
     results = client.search_user(query, count = users_to_scrape) # returns a list of the twikit.User class
     loopcount = 0
     repeats = 0
@@ -268,6 +272,7 @@ def main():
     write_data_to_file(users, "users.json")
     write_data_to_file(posts, "posts.json")
     write_data_to_file(relations, "relations.json")
+    record_completion_time("time.txt")
 
 if __name__ == '__main__':
     main()
