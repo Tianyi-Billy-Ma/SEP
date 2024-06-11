@@ -18,7 +18,7 @@ def get_post_info(client, user, tweet, codes_dict_full, relations):
     post_structure['post_id'] = tweet.id
     post_structure['comments'] = []
 
-    if tweet.replies == None:
+    if tweet.replies is None:
         post_structure['user_comment'] = ""
     else:
         for comment in tweet.replies:
@@ -27,21 +27,20 @@ def get_post_info(client, user, tweet, codes_dict_full, relations):
             else:
                 post_structure['comments'].append(comment.id)
 
-    if tweet.media == None:
+    if tweet.media is None:
         post_structure['pic_id'] = ""
     else:
         post_structure['pic_id'] = tweet.media[0]['id_str']
     post_structure['liked_users'] = [liker.id for liker in tweet.get_favoriters()]
     post_structure['keywords'] = []
 
-    for line in tweet.text:
-        for keyword in codes_dict_full.keys():
-            if keyword in line:
-                post_structure['keywords'].append(codes_dict_full[keyword])
+    for keyword in codes_dict_full.keys():
+        if keyword in tweet.text:
+            post_structure['keywords'].append(codes_dict_full[keyword])
 
     for hashtag in tweet.hashtags:
         if hashtag in codes_dict_full.keys():
-            post_structure.append(codes_dict_full[keyword])
+            post_structure['keywords'].append(codes_dict_full[keyword])
 
     # Eliminate duplicates
     post_structure['keywords'] = list(set(post_structure['keywords']))
@@ -61,25 +60,25 @@ def read_codes():
     codes_dict_full = {row[0]: row[1] for row in codes_df_full.itertuples(index=False, name=None)}
     return codes_dict_jack, codes_dict_full
 
-def login_credentials():
-    print("attempting login with credentials...")
+def login_credentials(profile):
+    print(f"attempting login profile {profile} with credentials...")
     client = Client('en-US')
-    with open("login.txt", "r") as f:
+    with open(f"login{profile}.txt", "r") as f:
         USERNAME, EMAIL, PASSWORD = f.read().splitlines()
-        print("stored login information")
+        print("read login information")
     client.login(
         auth_info_1=USERNAME ,
         auth_info_2=EMAIL,
         password=PASSWORD
     )
-    print("storing cookies in cookies.json")
-    client.save_cookies('cookies.json')
+    print(f"storing cookies in cookies{profile}.json")
+    client.save_cookies(f'cookies{profile}.json')
     return client
 
-def login_cookies():
-    print("attempting login in with cookies...")
+def login_cookies_user(profile):
+    print(f"attempting login profile {profile} in with cookies...")
     client = Client('en-US')
-    client.load_cookies('cookies.json')
+    client.load_cookies(f'cookies{profile}.json')
     return client
 
 def get_user_followers(client, user, relations, max_followers):
@@ -131,6 +130,7 @@ def get_user_posts(client, user, num_posts, codes_dict_full, relations, posts):
         relation_struct["src_id"] = user.id
         relation_struct["relation"] = "user-publish-post"
         relation_struct["dest_id"] = tweet.id
+        relations.append(relation_struct)
     return post_ids
 
 def get_user_keywords(client, user, post_ids, codes_dict_full, query, relations):
@@ -142,7 +142,7 @@ def get_user_keywords(client, user, post_ids, codes_dict_full, query, relations)
         for word in line.split():
             if word in codes_dict_full.keys():
                 user_keywords.append(codes_dict_full[word])
-                relation_struct["src_id"] = post.id
+                relation_struct["src_id"] = user.id
                 relation_struct["relation"] = "profile-include-keyword"
                 relation_struct["dest_id"] = codes_dict_full[word]
                 relations.append(relation_struct)
@@ -156,18 +156,17 @@ def get_user_keywords(client, user, post_ids, codes_dict_full, query, relations)
             relation_struct = {}
             if hashtag in codes_dict_full.keys():
                 user_keywords.append(codes_dict_full[hashtag])
-                relation_struct["src_id"] = post.id
+                relation_struct["src_id"] = post_id
                 relation_struct["relation"] = "post-include-keyword"
                 relation_struct["dest_id"] = codes_dict_full[hashtag]
                 relations.append(relation_struct)
 
         # check the post's text
-        for line in tweet.text:
-            relation_struct = {}
             for word in tweet.text.split():
+                relation_struct = {}
                 if word in codes_dict_full.keys():
                     user_keywords.append(codes_dict_full[word])
-                    relation_struct["src_id"] = post.id
+                    relation_struct["src_id"] = post_id
                     relation_struct["relation"] = "post-include-keyword"
                     relation_struct["dest_id"] = codes_dict_full[word]
                     relations.append(relation_struct)
@@ -190,29 +189,80 @@ def get_user_info(client, user, codes_dict_full, query, relations, posts):
     User_Structure['keywords'] = get_user_keywords(client, user, User_Structure['posts'], codes_dict_full, query, relations) # searches user profile and posts for keywords
     return User_Structure
 
+def get_previous_data(filename):
+    try:
+        with open(filename, 'r') as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        if filename != "relations.json":
+            data = {}
+        else:
+            data = []
+
+    return data
+
+def deal_with_rate_limits(profile):
+    profile = (profile + 1) % 3
+    time.sleep(random.randint(1, 3))
+    return profile
+
+
 def main():
+    """
+    due to rate limits I will now search one drug at each run of the program rather than looping through each drug name.
+    This means I will manually put a drug from codes_dict_jack.keys() into the program on each run
+    """
     # use login_cookies (to save session) if possible, if that doesn't work, use the login_credentials() function
-    #client = login_credentials()
-    client = login_cookies()
-    print("logged in!")
+
+    """
+    TEMPORARY TO ESTABLISH COOKIES
+    client = login_credentials(1)
+    client = login_credentials(2)
+    return
+    """
+
     codes_dict_jack, codes_dict_full = read_codes()
     # users will be the dictionary that all User_Structures are stored in 
-    users = dict()
-    posts = dict()
-    comments = dict()
-    relations = []
-    #for drug_name in codes_dict_jack.keys(): # search the drug names that have been assigned to jack
-    """
-    due to rate limits I will now search one drug at a time rather than looping through each drug name
-    """
-    query = "oxy"
-    time.sleep(random.randint(2, 10)) # waiting a bit to evade bot detection
-    results = client.search_user(query, count = 10) # returns a list of the twikit.User class
-    for user in results:
-        users[f'user_{user.id}'] = get_user_info(client, user, codes_dict_full, query, relations, posts) # this should return a user structure dictionary
+    # other structures also defined here
+    users = get_previous_data("users.json")
+    posts = get_previous_data("posts.json")
+    comments = get_previous_data("comments.json")
+    relations = get_previous_data("relations.json")
 
-    # print out for debugging:
-    print(json.dumps(users, indent=4))
+    profile = 0
+    client = login_cookies_user(profile)
+
+    print("Drugs to be searched include: ")
+    for drug in codes_dict_jack.keys():
+        print(drug, end =', ')
+
+    # Change the query each time to match the drug to be searched
+    query = "marijuana"
+    print(f"Drug being searched this time: {query}")
+    time.sleep(random.randint(2, 10)) # waiting a bit to evade bot detection
+    users_to_scrape = 10
+    results = client.search_user(query, count = users_to_scrape) # returns a list of the twikit.User class
+    loopcount = 0
+    repeats = 0
+    for user in results:
+        if loopcount == 0:
+            print("Looping through users...")
+        print(f"Scraping data from user {loopcount} / {users_to_scrape}")
+        if f'user_{user.id}' in users: # skip profiles that have already been seen
+            repeats += 1
+            print(f"user_{user.id} has already been scraped, skipping to next user")
+            continue
+        profile = deal_with_rate_limits(profile) # Switch profiles on every iteration of the loop to avoid rate limits
+        client = login_cookies_user(profile)
+        print(f"logged in profile {profile}!")
+        time.sleep(random.randint(1,2))
+
+        # get the data
+        users[f'user_{user.id}'] = get_user_info(client, user, codes_dict_full, query, relations, posts) # this should return a user structure dictionary
+        loopcount += 1
+
+    print(f"attempted to scrape {users_to_scrape} users using the query {query}")
+    print(f"{repeats} / {users_to_scrape} were already scraped and were skipped here")
 
     # write data to files
     write_data_to_file(users, "users.json")
