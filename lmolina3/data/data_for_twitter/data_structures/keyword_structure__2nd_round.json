@@ -2,7 +2,24 @@
     "amp": {
         "keyword": "amphetamine",
         "keyword_id": "amp",
-        "ids": []
+        "ids": [
+            "user_375252691",
+            "user_375252691",
+            "user_375252691",
+            "user_375252691",
+            "user_1045996112572809223",
+            "user_327602215",
+            "user_361013364",
+            "user_1028124876",
+            "user_907924302",
+            "user_1376561620114046981",
+            "user_375252691",
+            "user_375252691",
+            "user_375252691",
+            "user_375252691",
+            "user_375252691",
+            "user_375252691"
+        ]
     },
     "Coca": {
         "keyword": "Cocaine ",
@@ -87,7 +104,9 @@
     "Oxy": {
         "keyword": "Oxycodone",
         "keyword_id": "Oxy",
-        "ids": []
+        "ids": [
+            "tweet_1345936255318683649"
+        ]
     },
     "PCP": {
         "keyword": "PCP",
