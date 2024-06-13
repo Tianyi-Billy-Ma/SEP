@@ -7,7 +7,7 @@ import json
 
 def write_data_to_file(data, filename):
     # write the data to file
-    with open(filename, 'w') as file:
+    with open("./data/" + filename, 'w') as file:
         # Write the data to the file in JSON format
         json.dump(data, file, indent=4)
 
@@ -86,10 +86,16 @@ def get_user_followers(client, user, relations, max_followers):
     num_followers = user.followers_count
     if num_followers > max_followers:
         num_followers = max_followers
-    #followers_list = user.get_followers(num_followers) # this function returns twikit.User objects
-    #followers_list = user.get_followers(num_followers)
-    followers_list = client.get_user_followers(user.id, num_followers)
-    followers_list = followers_list[:num_followers] # Manually limit the number of folowees to store (twikit fxn fails to do this)
+
+    if num_followers > 0:
+        try:
+            followers_list = client.get_user_followers(user.id, num_followers)
+        except IndexError:
+            followers_list = []
+        followers_list = followers_list[:num_followers] # Manually limit the number of folowees to store (twikit fxn fails to do this)
+    else:
+        followers_list = []
+
     #followers_list = client.get_user_followers(user.id, num_followers)
     followers_id_list = []
     for follower_user in followers_list:
@@ -106,8 +112,15 @@ def get_user_followees(client, user, relations, max_followees):
     num_followees = user.following_count
     if num_followees > max_followees:
         num_followees = max_followees
-    followees_list = client.get_user_following(user.id, num_followees) # this function returns twikit.User objects
-    followees_list = followees_list[:num_followees] # Manually limit the number of folowees to store (twikit fxn fails to do this)
+    if num_followees > 0:
+        try:
+            followees_list = user.get_following(num_followees)
+        except IndexError:
+            followees_list = []
+        followees_list = followees_list[:num_followees] # Manually limit the number of folowees to store (twikit fxn fails to do this)
+    else:
+        followees_list = []
+
     followees_id_list = []
     for followee_user in followees_list:
         followees_id_list.append(followee_user.id)
@@ -119,10 +132,24 @@ def get_user_followees(client, user, relations, max_followees):
         relations.append(relation_struct)
     return followees_id_list
 
-def get_user_posts(client, user, num_posts, codes_dict_full, relations, posts):
+def get_user_posts(client, user, num_posts, codes_dict_full, relations, posts, pictures):
     tweets_list = client.get_user_tweets(user.id, 'Tweets', num_posts)
     post_ids = []
     for tweet in tweets_list:
+        if tweet.media is not None:
+            for media_item in tweet.media:
+                if media_item['type'] == "photo":
+                    picture = {}
+                    picture['pic_id'] = media_item['id_str']
+                    picture['post_id'] = tweet.id
+                    picture['url'] = media_item['media_url_https']
+                    pictures[media_item['id_str']] = picture
+                    print(f"type of picture being added: {media_item['type']}")
+                    relations_struct = {}
+                    relations_struct['src_id'] = tweet.id
+                    relations_struct['relation'] = ['post-has-picture']
+                    relations_struct['dest_id'] = media_item['id_str']
+                    relations.append(relations_struct)
         posts[tweet.id] = get_post_info(client, user, tweet, codes_dict_full, relations)
         post_ids.append(tweet.id)
         relation_struct = {}
@@ -176,7 +203,7 @@ def get_user_keywords(client, user, post_ids, codes_dict_full, query, relations)
         user_keywords.append(query)
     return user_keywords
 
-def get_user_info(client, user, codes_dict_full, query, relations, posts):
+def get_user_info(client, user, codes_dict_full, query, relations, posts, pictures):
     User_Structure = dict()
     User_Structure['username'] = user.name
     User_Structure['user_id'] = user.id
@@ -184,7 +211,7 @@ def get_user_info(client, user, codes_dict_full, query, relations, posts):
     User_Structure['followees'] = get_user_followees(client, user, relations, 10) # this fxn returns a list of followee ids. The last argument (# of followees to get) is adjustable
     User_Structure['profile_pic'] = user.profile_image_url
     User_Structure['profile_text'] = user.description
-    User_Structure['posts'] = get_user_posts(client, user, 6, codes_dict_full, relations, posts)
+    User_Structure['posts'] = get_user_posts(client, user, 6, codes_dict_full, relations, posts, pictures)
     User_Structure['keywords'] = get_user_keywords(client, user, User_Structure['posts'], codes_dict_full, query, relations) # searches user profile and posts for keywords
     return User_Structure
 
@@ -201,7 +228,7 @@ def get_previous_data(filename):
     return data
 
 def deal_with_rate_limits(profile):
-    profile = (profile + 1) % 3
+    profile = (profile + 1) % 4
     time.sleep(random.randint(1, 3))
     return profile
 
@@ -220,8 +247,7 @@ def main():
 
     """
     TEMPORARY TO ESTABLISH COOKIES
-    client = login_credentials(1)
-    client = login_credentials(2)
+    client = login_credentials(3)
     return
     """
 
@@ -230,7 +256,7 @@ def main():
     # other structures also defined here
     users = get_previous_data("users.json")
     posts = get_previous_data("posts.json")
-    comments = get_previous_data("comments.json")
+    pictures = get_previous_data("pictures.json")
     relations = get_previous_data("relations.json")
 
     profile = 0
@@ -241,19 +267,20 @@ def main():
         print(drug, end =', ')
 
     # Change the query each time to match the drug to be searched
-    query = "shrooms"
+    query = "m30s"
     print(f"\nDrug being searched this time: {query}")
     time.sleep(random.randint(2, 10)) # waiting a bit to evade bot detection
-    users_to_scrape = 15
+    users_to_scrape = 30
     results = client.search_user(query, count = users_to_scrape) # returns a list of the twikit.User class
     loopcount = 0
     repeats = 0
     for user in results:
         if loopcount == 0:
             print("Looping through users...")
-        print(f"Scraping data from user {loopcount} / {users_to_scrape}")
+        print(f"Scraping data from user {loopcount + 1} / {users_to_scrape}")
         if f'user_{user.id}' in users: # skip profiles that have already been seen
             repeats += 1
+            loopcount += 1
             print(f"user_{user.id} has already been scraped, skipping to next user")
             continue
         profile = deal_with_rate_limits(profile) # Switch profiles on every iteration of the loop to avoid rate limits
@@ -262,7 +289,7 @@ def main():
         time.sleep(random.randint(1,2))
 
         # get the data
-        users[f'user_{user.id}'] = get_user_info(client, user, codes_dict_full, query, relations, posts) # this should return a user structure dictionary
+        users[f'user_{user.id}'] = get_user_info(client, user, codes_dict_full, query, relations, posts, pictures) # this should return a user structure dictionary
         loopcount += 1
 
     print(f"attempted to scrape {users_to_scrape} users using the query {query}")
@@ -272,6 +299,7 @@ def main():
     write_data_to_file(users, "users.json")
     write_data_to_file(posts, "posts.json")
     write_data_to_file(relations, "relations.json")
+    write_data_to_file(pictures, "pictures.json")
     record_completion_time("time.txt")
 
 if __name__ == '__main__':
