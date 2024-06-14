@@ -1,0 +1,150 @@
+{
+    "amp": {
+        "keyword": "dexies",
+        "keyword_id": "amp",
+        "ids": [
+            "user_454185386",
+            "user_1486467532575985676",
+            "user_1486467532575985676",
+            "user_1486467532575985676",
+            "user_1595027914222977025",
+            "user_1595027914222977025",
+            "user_1595027914222977025",
+            "user_1595027914222977025",
+            "user_963143536182022146",
+            "user_963143536182022146",
+            "user_963143536182022146",
+            "user_963143536182022146",
+            "user_963143536182022146"
+        ]
+    },
+    "shards": {
+        "keyword": "ketshards",
+        "keyword_id": "shards",
+        "ids": []
+    },
+    "coke": {
+        "keyword": "coketwt",
+        "keyword_id": "coke",
+        "ids": []
+    },
+    "fent": {
+        "keyword": "breath mint fent ",
+        "keyword_id": "fent",
+        "ids": []
+    },
+    "fent-deriv": {
+        "keyword": "oxy 60s",
+        "keyword_id": "fent-deriv",
+        "ids": []
+    },
+    "GHB": {
+        "keyword": "ghb ",
+        "keyword_id": "GHB",
+        "ids": []
+    },
+    "Heroin": {
+        "keyword": "#heroin",
+        "keyword_id": "Heroin",
+        "ids": []
+    },
+    "Hydro": {
+        "keyword": "hyrocodone",
+        "keyword_id": "Hydro",
+        "ids": []
+    },
+    "bars": {
+        "keyword": "ket bars",
+        "keyword_id": "bars",
+        "ids": []
+    },
+    "lsd": {
+        "keyword": "lsd pills ",
+        "keyword_id": "lsd",
+        "ids": []
+    },
+    "Marij": {
+        "keyword": "kush sale ",
+        "keyword_id": "Marij",
+        "ids": []
+    },
+    "Marij-conc": {
+        "keyword": "doseeds",
+        "keyword_id": "Marij-conc",
+        "ids": []
+    },
+    "mdma": {
+        "keyword": "mdma pills ",
+        "keyword_id": "mdma",
+        "ids": []
+    },
+    "Mesc": {
+        "keyword": "mescaline plug",
+        "keyword_id": "Mesc",
+        "ids": []
+    },
+    "Meth-main": {
+        "keyword": "meth plug",
+        "keyword_id": "Meth-main",
+        "ids": []
+    },
+    "Mush": {
+        "keyword": "shrooms",
+        "keyword_id": "Mush",
+        "ids": [
+            "user_1730905798476210176"
+        ]
+    },
+    "Opium": {
+        "keyword": "opium",
+        "keyword_id": "Opium",
+        "ids": []
+    },
+    "Oxy": {
+        "keyword": "oxycodone",
+        "keyword_id": "Oxy",
+        "ids": [
+            "user_1737144920257835009"
+        ]
+    },
+    "PCP": {
+        "keyword": "PCP",
+        "keyword_id": "PCP",
+        "ids": []
+    },
+    "percocet": {
+        "keyword": "m30s",
+        "keyword_id": "percocet",
+        "ids": []
+    },
+    "Peyote": {
+        "keyword": "Peyote",
+        "keyword_id": "Peyote",
+        "ids": []
+    },
+    "Pro-W-Cod": {
+        "keyword": "Promethazine with Codeine",
+        "keyword_id": "Pro-W-Cod",
+        "ids": []
+    },
+    "Psy": {
+        "keyword": "psychedilics plug",
+        "keyword_id": "Psy",
+        "ids": []
+    },
+    "Syn-Can": {
+        "keyword": "pineapple express",
+        "keyword_id": "Syn-Can",
+        "ids": []
+    },
+    "Syn-Cath": {
+        "keyword": "flakka",
+        "keyword_id": "Syn-Cath",
+        "ids": []
+    },
+    "Xan": {
+        "keyword": "xanax plug",
+        "keyword_id": "Xan",
+        "ids": []
+    }
+}
