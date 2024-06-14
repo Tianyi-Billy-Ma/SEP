@@ -1,0 +1,124 @@
+{
+    "ecstasy-tag": {
+        "keyword": "#ecstasy",
+        "keyword_id": "ecstasy-tag",
+        "ids": []
+    },
+    "xtc-tag": {
+        "keyword": "#xtc",
+        "keyword_id": "xtc-tag",
+        "ids": []
+    },
+    "pill-tag": {
+        "keyword": "#pills",
+        "keyword_id": "pill-tag",
+        "ids": [
+            "user_1659879620487831554",
+            "tweet_1801071731806773596",
+            "tweet_1800724190011777256"
+        ]
+    },
+    "cocaine-tag": {
+        "keyword": "#cocaine",
+        "keyword_id": "cocaine-tag",
+        "ids": [
+            "tweet_1800722997390762237"
+        ]
+    },
+    "lsd-tag": {
+        "keyword": "#lsd",
+        "keyword_id": "lsd-tag",
+        "ids": [
+            "user_1659879620487831554"
+        ]
+    },
+    "weed1-tag": {
+        "keyword": "#weedGod",
+        "keyword_id": "weed1-tag",
+        "ids": []
+    },
+    "edibles-tag": {
+        "keyword": "#Edibles",
+        "keyword_id": "edibles-tag",
+        "ids": []
+    },
+    "gum-tag": {
+        "keyword": "#gummies",
+        "keyword_id": "gum-tag",
+        "ids": [
+            "user_1659879620487831554"
+        ]
+    },
+    "thc-tag": {
+        "keyword": "#thc",
+        "keyword_id": "thc-tag",
+        "ids": [
+            "user_1629618087153500160",
+            "tweet_1801078019400012020",
+            "tweet_1795265614627709049"
+        ]
+    },
+    "can-tag": {
+        "keyword": "#cannabis",
+        "keyword_id": "can-tag",
+        "ids": [
+            "user_1629618087153500160",
+            "tweet_1801073154510422477",
+            "tweet_1801072863308337173",
+            "tweet_1801071731806773596",
+            "tweet_1801071400108646501",
+            "tweet_1801071258785734810",
+            "tweet_1801071068896997533",
+            "tweet_1801070948289761774",
+            "tweet_1801070746426277988",
+            "tweet_1801070638838292914",
+            "tweet_1801070529136259203",
+            "tweet_1801070400438173875",
+            "tweet_1801070131650474016",
+            "tweet_1801068710989373678",
+            "tweet_1801060440505483719",
+            "user_1699814664153223169",
+            "user_1580545289257197570"
+        ]
+    },
+    "weed2-tag": {
+        "keyword": "#weedlife",
+        "keyword_id": "weed2-tag",
+        "ids": [
+            "tweet_1801073154510422477",
+            "tweet_1801072863308337173",
+            "tweet_1801071731806773596",
+            "tweet_1801071400108646501",
+            "tweet_1801071258785734810",
+            "tweet_1801071068896997533",
+            "tweet_1801070948289761774",
+            "tweet_1801070746426277988",
+            "tweet_1801070638838292914",
+            "tweet_1801070529136259203",
+            "tweet_1801070400438173875",
+            "tweet_1801070131650474016",
+            "tweet_1801068710989373678",
+            "tweet_1801060440505483719"
+        ]
+    },
+    "ecstacy-tag": {
+        "keyword": "#ecstacy",
+        "keyword_id": "ecstacy-tag",
+        "ids": []
+    },
+    "shroom-tag": {
+        "keyword": "#shroom",
+        "keyword_id": "shroom-tag",
+        "ids": [
+            "user_1659879620487831554",
+            "user_1444887070053474306",
+            "tweet_1800722997390762237",
+            "user_1547345156088729612"
+        ]
+    },
+    "pysch-tag": {
+        "keyword": "#pyschedelics",
+        "keyword_id": "pysch-tag",
+        "ids": []
+    }
+}
