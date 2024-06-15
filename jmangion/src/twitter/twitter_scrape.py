@@ -4,6 +4,7 @@ import time
 import pandas as pd
 import random
 import json
+import httpx
 
 def write_data_to_file(data, filename):
     # write the data to file
@@ -38,7 +39,7 @@ def get_post_info(client, user, tweet, codes_dict_full, relations):
     post_structure['liked_users'] = [liker.id for liker in tweet.get_favoriters()]
     post_structure['keywords'] = []
 
-    for liker in tweet.get_favoriters():
+    for liker in tweet.get_favoriters()[:25]: # only get the first 25 to avoid timeout error
         liker_relation = {}
         liker_relation['src_id'] = liker.id
         liker_relation['relation'] = "user-like-post"
@@ -72,6 +73,7 @@ def read_codes():
     codes_dict_full = {row[0].lower(): row[1] for row in codes_df_full.itertuples(index=False, name=None)}
 
     del codes_dict_jack['mescaline plug'] # already searched this
+    del codes_dict_jack['meth plug'] # already searched this
 
 
     print("Using multiple rounds, this program will search over... ")
@@ -351,7 +353,7 @@ def main():
         relations = get_previous_data("relations.json")
         keywords = get_previous_data("keywords.json")
 
-        profile = 0
+        profile = 1
         client = login_cookies_user(profile)
 
         print("Drugs to be searched include: ")
@@ -380,9 +382,23 @@ def main():
         loopcount = 0
         repeats = 0
         for user in list(results):
-            if loopcount > 35: # waiting 15 mins to avoid rate limits
+            if loopcount % 25 == 0 and loopcount != 0: # waiting 15 mins to avoid rate limits
+                print("hit checkpoint, writing data to files...")
+                write_data_to_file(users, "users.json")
+                write_data_to_file(posts, "posts.json")
+                write_data_to_file(relations, "relations.json")
+                write_data_to_file(pictures, "pictures.json")
+                write_data_to_file(keywords, "keywords.json")
+                record_completion_time("time.txt", query)
+                print("sleeping 15 minutes to avoid rate limits... 30 examples have been searched without sleeping for {query} ")
                 time.sleep(15*60)
-                print("sleeping 15 minutes to avoid rate limits... 35 examples have been searched without sleeping for {query} ")
+                print("sleeping over. Recopying data from files...")
+                users = get_previous_data("users.json")
+                posts = get_previous_data("posts.json")
+                pictures = get_previous_data("pictures.json")
+                relations = get_previous_data("relations.json")
+                keywords = get_previous_data("keywords.json")
+
             print("Looping through users...") if loopcount == 0 else None
             print(f"Scraping data from user {loopcount + 1} / {len(results)}")
             if f'user_{user.id}' in users: # skip profiles that have already been seen
@@ -397,11 +413,17 @@ def main():
 
             # get the data
 
-            users[f'user_{user.id}'] = get_user_info(client, user, codes_dict_full, query, relations, posts, pictures, keywords) # this should return a user structure dictionary
+            try:
+                users[f'user_{user.id}'] = get_user_info(client, user, codes_dict_full, query, relations, posts, pictures, keywords) # this should return a user structure dictionary
+            except httpx.ReadTimeout:
+                print("hit httpx timeout, sleeping for 15 mins...")
+                time.sleep(15*60)
+                users[f'user_{user.id}'] = get_user_info(client, user, codes_dict_full, query, relations, posts, pictures, keywords) # this should return a user structure dictionary
+
+
             loopcount += 1
         total_users_scraped += (len(results) - repeats)
         print(f"attempted to scrape {len(results)} users using the query {query}")
-        print(f"found {loopcount} accounts to scrape for query: {query}")
         print(f"{repeats} / {len(results)} were already scraped and were skipped here")
 
         # write data to files periodically (after each drug search)
