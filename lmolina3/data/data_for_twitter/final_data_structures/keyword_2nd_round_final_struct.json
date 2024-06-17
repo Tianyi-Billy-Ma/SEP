@@ -1,0 +1,301 @@
+{
+    "amp": {
+        "keyword": "amphetamine",
+        "keyword_id": "amp",
+        "ids": [
+            "user_1028124876",
+            "user_361013364",
+            "user_1045996112572809223",
+            "user_1376561620114046981",
+            "user_907924302",
+            "user_327602215",
+            "user_375252691",
+            "user_454185386",
+            "user_1486467532575985676",
+            "user_1595027914222977025",
+            "user_963143536182022146"
+        ]
+    },
+    "Coca": {
+        "keyword": "Cocaine ",
+        "keyword_id": "Coca",
+        "ids": []
+    },
+    "crack-coca": {
+        "keyword": "crack cocaine",
+        "keyword_id": "crack-coca",
+        "ids": []
+    },
+    "fent": {
+        "keyword": "fentanyl ",
+        "keyword_id": "fent",
+        "ids": []
+    },
+    "fent-deriv": {
+        "keyword": "fentanyl derivatives",
+        "keyword_id": "fent-deriv",
+        "ids": []
+    },
+    "GHB": {
+        "keyword": "GHB",
+        "keyword_id": "GHB",
+        "ids": []
+    },
+    "Heroin": {
+        "keyword": "Heroin",
+        "keyword_id": "Heroin",
+        "ids": []
+    },
+    "Hydro": {
+        "keyword": "Hydrocodone",
+        "keyword_id": "Hydro",
+        "ids": []
+    },
+    "klon": {
+        "keyword": "Klonopin",
+        "keyword_id": "klon",
+        "ids": []
+    },
+    "LSDtrip-1": {
+        "keyword": "LSDtrip",
+        "keyword_id": "LSDtrip-1",
+        "ids": []
+    },
+    "Marij": {
+        "keyword": "Marijuana",
+        "keyword_id": "Marij",
+        "ids": []
+    },
+    "Marij-conc": {
+        "keyword": "Marijuana Concentrates",
+        "keyword_id": "Marij-conc",
+        "ids": []
+    },
+    "MDMA-main": {
+        "keyword": "MDMA",
+        "keyword_id": "MDMA-main",
+        "ids": []
+    },
+    "Mesc": {
+        "keyword": "Mescaline",
+        "keyword_id": "Mesc",
+        "ids": []
+    },
+    "Meth-main": {
+        "keyword": "Methamphetamine",
+        "keyword_id": "Meth-main",
+        "ids": []
+    },
+    "Mush": {
+        "keyword": "Mushrooms",
+        "keyword_id": "Mush",
+        "ids": [
+            "user_1730905798476210176"
+        ]
+    },
+    "Opium": {
+        "keyword": "Opium",
+        "keyword_id": "Opium",
+        "ids": []
+    },
+    "Oxy": {
+        "keyword": "Oxycodone",
+        "keyword_id": "Oxy",
+        "ids": [
+            "tweet_1345936255318683649",
+            "user_1737144920257835009"
+        ]
+    },
+    "PCP": {
+        "keyword": "PCP",
+        "keyword_id": "PCP",
+        "ids": []
+    },
+    "percocet": {
+        "keyword": "percocet",
+        "keyword_id": "percocet",
+        "ids": []
+    },
+    "Peyote": {
+        "keyword": "Peyote",
+        "keyword_id": "Peyote",
+        "ids": []
+    },
+    "Pro-W-Cod": {
+        "keyword": "Promethazine with Codine",
+        "keyword_id": "Pro-W-Cod",
+        "ids": []
+    },
+    "Rit": {
+        "keyword": "Ritalin",
+        "keyword_id": "Rit",
+        "ids": []
+    },
+    "Syn-Can": {
+        "keyword": "Synthetic Cannabiniods",
+        "keyword_id": "Syn-Can",
+        "ids": []
+    },
+    "Syn-Cath": {
+        "keyword": "Synthetic Cathinones",
+        "keyword_id": "Syn-Cath",
+        "ids": []
+    },
+    "Xan": {
+        "keyword": "Xanax",
+        "keyword_id": "Xan",
+        "ids": []
+    },
+    "shards": {
+        "keyword": "ketshards",
+        "keyword_id": "shards",
+        "ids": []
+    },
+    "coke": {
+        "keyword": "coketwt",
+        "keyword_id": "coke",
+        "ids": []
+    },
+    "bars": {
+        "keyword": "ket bars",
+        "keyword_id": "bars",
+        "ids": []
+    },
+    "lsd": {
+        "keyword": "lsd pills ",
+        "keyword_id": "lsd",
+        "ids": []
+    },
+    "mdma": {
+        "keyword": "mdma pills ",
+        "keyword_id": "mdma",
+        "ids": []
+    },
+    "Psy": {
+        "keyword": "psychedilics plug",
+        "keyword_id": "Psy",
+        "ids": []
+    },
+    "ecstasy-tag": {
+        "keyword": "#ecstasy",
+        "keyword_id": "ecstasy-tag",
+        "ids": []
+    },
+    "xtc-tag": {
+        "keyword": "#xtc",
+        "keyword_id": "xtc-tag",
+        "ids": []
+    },
+    "pill-tag": {
+        "keyword": "#pills",
+        "keyword_id": "pill-tag",
+        "ids": [
+            "tweet_1800724190011777256",
+            "tweet_1801071731806773596",
+            "user_1659879620487831554"
+        ]
+    },
+    "cocaine-tag": {
+        "keyword": "#cocaine",
+        "keyword_id": "cocaine-tag",
+        "ids": [
+            "tweet_1800722997390762237"
+        ]
+    },
+    "lsd-tag": {
+        "keyword": "#lsd",
+        "keyword_id": "lsd-tag",
+        "ids": [
+            "user_1659879620487831554"
+        ]
+    },
+    "weed1-tag": {
+        "keyword": "#weedGod",
+        "keyword_id": "weed1-tag",
+        "ids": []
+    },
+    "edibles-tag": {
+        "keyword": "#Edibles",
+        "keyword_id": "edibles-tag",
+        "ids": []
+    },
+    "gum-tag": {
+        "keyword": "#gummies",
+        "keyword_id": "gum-tag",
+        "ids": [
+            "user_1659879620487831554"
+        ]
+    },
+    "thc-tag": {
+        "keyword": "#thc",
+        "keyword_id": "thc-tag",
+        "ids": [
+            "tweet_1801078019400012020",
+            "user_1629618087153500160",
+            "tweet_1795265614627709049"
+        ]
+    },
+    "can-tag": {
+        "keyword": "#cannabis",
+        "keyword_id": "can-tag",
+        "ids": [
+            "tweet_1801070638838292914",
+            "user_1580545289257197570",
+            "user_1629618087153500160",
+            "tweet_1801071731806773596",
+            "tweet_1801070746426277988",
+            "tweet_1801071400108646501",
+            "tweet_1801070948289761774",
+            "tweet_1801070529136259203",
+            "tweet_1801071068896997533",
+            "tweet_1801072863308337173",
+            "tweet_1801068710989373678",
+            "tweet_1801060440505483719",
+            "tweet_1801073154510422477",
+            "tweet_1801071258785734810",
+            "tweet_1801070400438173875",
+            "tweet_1801070131650474016",
+            "user_1699814664153223169"
+        ]
+    },
+    "weed2-tag": {
+        "keyword": "#weedlife",
+        "keyword_id": "weed2-tag",
+        "ids": [
+            "tweet_1801070638838292914",
+            "tweet_1801071731806773596",
+            "tweet_1801070746426277988",
+            "tweet_1801071400108646501",
+            "tweet_1801070948289761774",
+            "tweet_1801070529136259203",
+            "tweet_1801071068896997533",
+            "tweet_1801072863308337173",
+            "tweet_1801068710989373678",
+            "tweet_1801060440505483719",
+            "tweet_1801073154510422477",
+            "tweet_1801071258785734810",
+            "tweet_1801070400438173875",
+            "tweet_1801070131650474016"
+        ]
+    },
+    "ecstacy-tag": {
+        "keyword": "#ecstacy",
+        "keyword_id": "ecstacy-tag",
+        "ids": []
+    },
+    "shroom-tag": {
+        "keyword": "#shroom",
+        "keyword_id": "shroom-tag",
+        "ids": [
+            "tweet_1800722997390762237",
+            "user_1444887070053474306",
+            "user_1547345156088729612",
+            "user_1659879620487831554"
+        ]
+    },
+    "pysch-tag": {
+        "keyword": "#pyschedelics",
+        "keyword_id": "pysch-tag",
+        "ids": []
+    }
+}
