@@ -1,57 +1,64 @@
 import torch
-import sys
 import torch.nn.functional as F
 from data import dataset
-from arguments import parse_args
+from arguments import parse_args, add_data_features
 from model import GCN_model
 
-sys.dont_write_bytecode = True
 
-def train(model, X, Y, edge_indices):
+def train(model, X, Y,data):
     model.train()
-    optimizer = torch.optim.Adam(model.parameters(), lr = 0.001, weight_decay = model.wd)
+    optimizer = torch.optim.Adam(model.parameters(), lr = model.lr, weight_decay = model.wd)
     optimizer.zero_grad()
-    activations = model(X, edge_indices)
-    loss = F.nll_loss(activations, Y)
+    activations = model(X, data.edge_index)
+
+    # only calculate loss on train labels!!
+    loss = F.nll_loss(activations[data.train_mask], Y[data.train_mask])
     loss.backward()
     optimizer.step()
+
+def get_masked_acc(activations, y_true, mask):
+    length = activations[mask].shape[0]
+    correct = 0
+    for yhat, y in zip(activations[mask], y_true[mask]):
+        if torch.argmax(yhat) == y:
+            correct += 1
+
+    return correct / length
+
+def get_accuracy(activations, y_true, data):
+    train_acc = get_masked_acc(activations, y_true, data.train_mask)
+    test_acc = get_masked_acc(activations, y_true, data.test_mask)
+    val_acc = get_masked_acc(activations, y_true, data.val_mask)
+    return train_acc, test_acc, val_acc
+
 
 def main():
     # get data
     data = dataset[0]
-    # training data
-    x_train = data.x[data.train_mask]
-    y_train = data.y[data.train_mask]
-    # testing data
-    x_test = data.x[data.test_mask]
-    y_test = data.y[data.test_mask]
-    # validation data
-    x_val = data.x[data.val_mask]
-    y_val = data.y[data.val_mask]
+    x = data.x
+    y = data.y
 
     # get preferences
     args = parse_args()
+    args = add_data_features(args, data)
 
     for run in range(args.runs):
         # initialize model
-        model = GCN_model()
-        print("\n------------ new model ----------\n")
+        model = GCN_model(args)
 
+        print("\n------------ new model ------------\n")
         for epoch in range(args.epochs):
-            # backprop & update
-            train(model, x_train, y_train, data.edge_index)
 
-            # print accuracy every 50 steps
-            if epoch % 50 == 0:
+            # backprop & update
+            train(model, x, y, data.edge_index, data)
+
+            # log loss every 50 steps
+            if epoch % 50 == 0 or epoch == args.epochs - 1:
                 model.eval()
-                train_activations = model(x_train, edge_indices)
-                train_loss = F.nll_loss(train_activations, y_train)
-                test_activations = model(x_test, edge_indices)
-                test_loss = F.nll_loss(test_activations, y_test)
-                val_activations = model(x_val, edge_index)
-                val_loss = F.nll_loss(val_activations, y_val)
-                print(f"Train loss: {train_loss} | Test loss: {test_loss} | Validation Loss: {val_loss}")
-                # TODO: report accuracy 
+                activations = model(x, data.edge_index)
+                loss = F.nll_loss(activations, y)
+                train_acc, test_acc, val_acc = get_accuracy(activations, y, data)
+                print(f" Epoch: {epoch} | Total Loss: {loss} | Train Accuracy: {train_acc} | Test Accuracy: {test_acc} | Val Accuracy: {val_acc}")
 
 
 if __name__ == '__main__':

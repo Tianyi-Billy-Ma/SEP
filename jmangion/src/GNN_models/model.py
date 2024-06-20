@@ -28,9 +28,8 @@ def make_layers(self):
     return nn.ModuleList(layers)
 
 class GCN_model(nn.Module):
-    def __init__(self):
+    def __init__(self, args):
         super().__init__()
-        args = arguments.parse_args()
         self.num_features = args.num_features
         self.num_layers = args.num_layers
         self.num_hidden = args.num_hidden

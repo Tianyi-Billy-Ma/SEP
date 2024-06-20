@@ -13,13 +13,16 @@ def parse_args():
     parser.add_argument('--wd', default=0.001, type=float)
     parser.add_argument('--num_layers', default=2, type=int)
     parser.add_argument("--num_hidden", default=256, type=int)
-    parser.add_argument('--num_features', default= 1433, type=int)  # Placeholder
-    parser.add_argument('--num_classes', default=7, type=int)  # Placeholder
-
-
-
+    parser.add_argument('--num_features', default= 1, type=int)  # Placeholder 1433 for Cora
+    parser.add_argument('--num_classes', default=1, type=int)  # Placeholder 7 for Cora 
 
     args = parser.parse_args()
+    return args
+
+
+def add_data_features(args, data):
+    args.num_features = data.x.shape[1]
+    args.num_classes = data.y.shape[0]
     return args
 
 

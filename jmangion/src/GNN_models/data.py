@@ -1,12 +1,35 @@
 from torch_geometric.datasets import Planetoid
 from arguments import parse_args
 
+"""
+torch version 2.3.1
+torch_geometric version 2.5.3
+"""
 
 args = parse_args()
 dataset = Planetoid(root=args.root_dir, name='Cora')
 
+data = dataset[0]
 
-# data notes
+"""
+debugging stuff
+print("x shape:")
+print(data.x.shape)
+
+print("Y shape:")
+print(data.y.shape)
+"""
+
+"""
+PubMed data notes
+x shape:
+torch.Size([19717, 500])
+Y shape:
+torch.Size([19717])
+"""
+
+
+# Cora data notes
 # nodes: 2708
 # train nodes: 140
 # test nodes: 1000
