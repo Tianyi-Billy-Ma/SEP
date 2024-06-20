@@ -19,36 +19,45 @@ def train(data,train_data, model, optimizer):
     model.train()
     optimizer.zero_grad()
     out = model(data)
-    loss = F.nll_loss(out[train_data], data.y[train_data])
+    loss = F.cross_entropy(out[train_data], data.y[train_data])
     loss.backward()
     optimizer.step()
-
-# def validate(model, data, val_data):
-#     model.eval()
-#     with torch.no_grad():
-#         out = model(data)
-#         val_loss = F.nll_loss(out[val_data], data.y[val_data].item())
-#         pred = out[val_data].argmax(dim = 1)
+    return loss.item()
 
 
-def run(data, train_data, model, optimizer, epochs=200):
-    for epoch in epochs:
-        train(data, train_data, model, optimizer)
-        validate()
+def validate(model, data, val_mask):
+    model.eval()
+    with torch.no_grad():
+        out = model(data)
+        val_loss = F.cross_entropy(out[val_mask], data.y[val_mask]).item()
+        pred = out[val_mask].argmax(dim=1)
+        val_acc = (pred == data.y[val_mask]).sum().item() / val_mask.sum().item()
+    return val_loss, val_acc
+
+
+    
 
 
 
-def main_func():
+def run(data, train_data, model, optimizer, val_data, epochs=200):
+    for epoch in range(epochs):
+        train_loss = train(data, train_data, model, optimizer)
+        val_loss, val_acc = validate(model, data, val_data)
+        print(f'epoch {epoch}, train loss {train_loss:.4f}, Val loss: {val_loss: .4f}, val acc {val_acc: .4f}')
+
+
+
+def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     dataset = Planetoid(root=SAVE_PATH, name = 'Cora')
     data = dataset[0].to(device)
     train_data, val_data, test_data, = get_data_sets(data)
 
     model = GCN(dataset).to(device)
-
+    
     optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
-
-    train(data, train_data, model, optimizer)
+    run(data, train_data, model, optimizer, val_data)
+    # train(data, train_data, model, optimizer)
     # datasets = {}
     # data_cleaned = {}
     # for name in ['Cora', 'CiteSeer', 'PubMed']:
@@ -76,7 +85,7 @@ class GCN(torch.nn.Module):
         return F.log_softmax(x, dim=1)
 
 if __name__ == '__main__': 
-    main_func()
+    main()
 
 
     
