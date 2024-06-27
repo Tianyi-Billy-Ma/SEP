@@ -2,170 +2,170 @@ Dataset: Cora
 
 <class '__main__.GCN'>
 Run 1/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9518 | Val Acc: 0.4926 | Test Acc: 0.5125
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8287
+Epoch: 1/300 | Train Loss: 1.9586 | Val Acc: 0.4191 | Test Acc: 0.4501
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7904 | Test Acc: 0.8273
 Run 2/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9632 | Val Acc: 0.4338 | Test Acc: 0.4534
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8269
+Epoch: 1/300 | Train Loss: 1.9685 | Val Acc: 0.4485 | Test Acc: 0.4783
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8283
 Run 3/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9439 | Val Acc: 0.3603 | Test Acc: 0.3869
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8319
+Epoch: 1/300 | Train Loss: 1.9507 | Val Acc: 0.4559 | Test Acc: 0.4751
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7904 | Test Acc: 0.8269
 Run 4/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9501 | Val Acc: 0.4228 | Test Acc: 0.4460
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7904 | Test Acc: 0.8278
+Epoch: 1/300 | Train Loss: 1.9513 | Val Acc: 0.4926 | Test Acc: 0.4834
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8269
 Run 5/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9504 | Val Acc: 0.3897 | Test Acc: 0.4021
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7978 | Test Acc: 0.8283
+Epoch: 1/300 | Train Loss: 1.9336 | Val Acc: 0.4706 | Test Acc: 0.4894
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8269
 
-Mean Accuracy over 5 runs: 0.8279, Std Deviation: 0.0014
+Mean Accuracy over 5 runs: 0.8260, Std Deviation: 0.0005
 
 Run 1/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 1.9549 | Val Acc: 0.4301 | Test Acc: 0.4488
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.8015 | Test Acc: 0.8301
+Epoch: 1/300 | Train Loss: 1.9395 | Val Acc: 0.3750 | Test Acc: 0.4044
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7904 | Test Acc: 0.8292
 Run 2/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 1.9492 | Val Acc: 0.4265 | Test Acc: 0.4363
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8283
+Epoch: 1/300 | Train Loss: 1.9483 | Val Acc: 0.5294 | Test Acc: 0.5346
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7978 | Test Acc: 0.8246
 Run 3/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 1.9486 | Val Acc: 0.5257 | Test Acc: 0.5212
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7904 | Test Acc: 0.8246
+Epoch: 1/300 | Train Loss: 1.9471 | Val Acc: 0.4228 | Test Acc: 0.4409
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8278
 Run 4/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 1.9567 | Val Acc: 0.4118 | Test Acc: 0.4363
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7978 | Test Acc: 0.8296
+Epoch: 1/300 | Train Loss: 1.9410 | Val Acc: 0.4890 | Test Acc: 0.4945
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8310
 Run 5/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 1.9542 | Val Acc: 0.4412 | Test Acc: 0.4792
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7904 | Test Acc: 0.8287
+Epoch: 1/300 | Train Loss: 1.9546 | Val Acc: 0.3860 | Test Acc: 0.4317
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8301
 
-Mean Accuracy over 5 runs: 0.8276, Std Deviation: 0.0019
+Mean Accuracy over 5 runs: 0.8283, Std Deviation: 0.0020
 
 Run 1/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9517 | Val Acc: 0.3897 | Test Acc: 0.4252
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7904 | Test Acc: 0.8315
+Epoch: 1/300 | Train Loss: 1.9503 | Val Acc: 0.5147 | Test Acc: 0.5305
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8310
 Run 2/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9519 | Val Acc: 0.4007 | Test Acc: 0.4132
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7868 | Test Acc: 0.8287
+Epoch: 1/300 | Train Loss: 1.9402 | Val Acc: 0.3824 | Test Acc: 0.4132
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7978 | Test Acc: 0.8269
 Run 3/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9582 | Val Acc: 0.4853 | Test Acc: 0.4963
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7904 | Test Acc: 0.8273
+Epoch: 1/300 | Train Loss: 1.9628 | Val Acc: 0.4412 | Test Acc: 0.4668
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7978 | Test Acc: 0.8324
 Run 4/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9386 | Val Acc: 0.4265 | Test Acc: 0.4497
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7904 | Test Acc: 0.8296
+Epoch: 1/300 | Train Loss: 1.9355 | Val Acc: 0.3824 | Test Acc: 0.4104
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7978 | Test Acc: 0.8269
 Run 5/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9698 | Val Acc: 0.4706 | Test Acc: 0.4880
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8287
+Epoch: 1/300 | Train Loss: 1.9501 | Val Acc: 0.4265 | Test Acc: 0.4631
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7941 | Test Acc: 0.8283
 
-Mean Accuracy over 5 runs: 0.8284, Std Deviation: 0.0021
+Mean Accuracy over 5 runs: 0.8283, Std Deviation: 0.0018
 
 
 <class '__main__.GAT'>
 Run 1/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9842 | Val Acc: 0.4118 | Test Acc: 0.4552
-Epoch: 201/300 | Train Loss: 0.5242 | Val Acc: 0.7904 | Test Acc: 0.8167
+Epoch: 1/300 | Train Loss: 1.9873 | Val Acc: 0.4743 | Test Acc: 0.4760
+Epoch: 201/300 | Train Loss: 0.5517 | Val Acc: 0.8199 | Test Acc: 0.8287
 Run 2/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 2.0285 | Val Acc: 0.4779 | Test Acc: 0.4866
-Epoch: 201/300 | Train Loss: 0.6075 | Val Acc: 0.8015 | Test Acc: 0.8259
+Epoch: 1/300 | Train Loss: 2.0218 | Val Acc: 0.4632 | Test Acc: 0.4621
+Epoch: 201/300 | Train Loss: 0.6108 | Val Acc: 0.7978 | Test Acc: 0.8333
 Run 3/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 2.0785 | Val Acc: 0.4890 | Test Acc: 0.5309
-Epoch: 201/300 | Train Loss: 0.5859 | Val Acc: 0.7941 | Test Acc: 0.8306
+Epoch: 1/300 | Train Loss: 2.0278 | Val Acc: 0.5404 | Test Acc: 0.5254
+Epoch: 201/300 | Train Loss: 0.6490 | Val Acc: 0.8015 | Test Acc: 0.8347
 Run 4/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9805 | Val Acc: 0.4191 | Test Acc: 0.4617
-Epoch: 201/300 | Train Loss: 0.6478 | Val Acc: 0.7978 | Test Acc: 0.8269
+Epoch: 1/300 | Train Loss: 1.9653 | Val Acc: 0.5772 | Test Acc: 0.5457
+Epoch: 201/300 | Train Loss: 0.6270 | Val Acc: 0.8088 | Test Acc: 0.8338
 Run 5/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9988 | Val Acc: 0.4706 | Test Acc: 0.4820
-Epoch: 201/300 | Train Loss: 0.6298 | Val Acc: 0.7978 | Test Acc: 0.8315
+Epoch: 1/300 | Train Loss: 2.0241 | Val Acc: 0.5368 | Test Acc: 0.5651
+Epoch: 201/300 | Train Loss: 0.6412 | Val Acc: 0.8088 | Test Acc: 0.8283
 
-Mean Accuracy over 5 runs: 0.8293, Std Deviation: 0.0021
+Mean Accuracy over 5 runs: 0.8270, Std Deviation: 0.0032
 
 Run 1/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 1.9833 | Val Acc: 0.5257 | Test Acc: 0.5360
-Epoch: 201/300 | Train Loss: 0.6437 | Val Acc: 0.8015 | Test Acc: 0.8329
+Epoch: 1/300 | Train Loss: 2.0345 | Val Acc: 0.5257 | Test Acc: 0.5499
+Epoch: 201/300 | Train Loss: 0.7147 | Val Acc: 0.8088 | Test Acc: 0.8232
 Run 2/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 2.0358 | Val Acc: 0.3787 | Test Acc: 0.4151
-Epoch: 201/300 | Train Loss: 0.6286 | Val Acc: 0.7831 | Test Acc: 0.8273
+Epoch: 1/300 | Train Loss: 2.0338 | Val Acc: 0.5919 | Test Acc: 0.6136
+Epoch: 201/300 | Train Loss: 0.6861 | Val Acc: 0.7904 | Test Acc: 0.8319
 Run 3/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 2.0141 | Val Acc: 0.5588 | Test Acc: 0.5406
-Epoch: 201/300 | Train Loss: 0.5317 | Val Acc: 0.8015 | Test Acc: 0.8269
+Epoch: 1/300 | Train Loss: 1.9942 | Val Acc: 0.6544 | Test Acc: 0.6588
+Epoch: 201/300 | Train Loss: 0.6282 | Val Acc: 0.8272 | Test Acc: 0.8296
 Run 4/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 2.0175 | Val Acc: 0.4890 | Test Acc: 0.5018
-Epoch: 201/300 | Train Loss: 0.6012 | Val Acc: 0.7978 | Test Acc: 0.8218
+Epoch: 1/300 | Train Loss: 1.9682 | Val Acc: 0.6397 | Test Acc: 0.6450
+Epoch: 201/300 | Train Loss: 0.5856 | Val Acc: 0.8015 | Test Acc: 0.8301
 Run 5/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 2.0285 | Val Acc: 0.6176 | Test Acc: 0.6464
-Epoch: 201/300 | Train Loss: 0.6730 | Val Acc: 0.7978 | Test Acc: 0.8246
+Epoch: 1/300 | Train Loss: 1.9878 | Val Acc: 0.4853 | Test Acc: 0.4931
+Epoch: 201/300 | Train Loss: 0.5946 | Val Acc: 0.7941 | Test Acc: 0.8301
 
-Mean Accuracy over 5 runs: 0.8302, Std Deviation: 0.0059
+Mean Accuracy over 5 runs: 0.8267, Std Deviation: 0.0040
 
 Run 1/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 2.0408 | Val Acc: 0.4743 | Test Acc: 0.5005
-Epoch: 201/300 | Train Loss: 0.6537 | Val Acc: 0.8051 | Test Acc: 0.8310
+Epoch: 1/300 | Train Loss: 2.0008 | Val Acc: 0.4118 | Test Acc: 0.4201
+Epoch: 201/300 | Train Loss: 0.6651 | Val Acc: 0.8015 | Test Acc: 0.8255
 Run 2/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9876 | Val Acc: 0.6287 | Test Acc: 0.6219
-Epoch: 201/300 | Train Loss: 0.5884 | Val Acc: 0.8015 | Test Acc: 0.8407
+Epoch: 1/300 | Train Loss: 2.0111 | Val Acc: 0.4228 | Test Acc: 0.4298
+Epoch: 201/300 | Train Loss: 0.6654 | Val Acc: 0.8199 | Test Acc: 0.8255
 Run 3/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 2.0058 | Val Acc: 0.3934 | Test Acc: 0.4100
-Epoch: 201/300 | Train Loss: 0.7000 | Val Acc: 0.8125 | Test Acc: 0.8343
+Epoch: 1/300 | Train Loss: 2.0220 | Val Acc: 0.5147 | Test Acc: 0.5125
+Epoch: 201/300 | Train Loss: 0.5206 | Val Acc: 0.8199 | Test Acc: 0.8403
 Run 4/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9942 | Val Acc: 0.4375 | Test Acc: 0.4243
-Epoch: 201/300 | Train Loss: 0.5379 | Val Acc: 0.8051 | Test Acc: 0.8283
+Epoch: 1/300 | Train Loss: 1.9865 | Val Acc: 0.6176 | Test Acc: 0.6468
+Epoch: 201/300 | Train Loss: 0.5962 | Val Acc: 0.8235 | Test Acc: 0.8296
 Run 5/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9914 | Val Acc: 0.4596 | Test Acc: 0.4825
-Epoch: 201/300 | Train Loss: 0.5478 | Val Acc: 0.8051 | Test Acc: 0.8389
+Epoch: 1/300 | Train Loss: 2.0038 | Val Acc: 0.5809 | Test Acc: 0.5771
+Epoch: 201/300 | Train Loss: 0.5757 | Val Acc: 0.7941 | Test Acc: 0.8278
 
-Mean Accuracy over 5 runs: 0.8308, Std Deviation: 0.0022
+Mean Accuracy over 5 runs: 0.8288, Std Deviation: 0.0023
 
 
 <class '__main__.GIN'>
 Run 1/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9550 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7059 | Test Acc: 0.7299
+Epoch: 1/300 | Train Loss: 1.9609 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.6985 | Test Acc: 0.7387
 Run 2/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9574 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.6838 | Test Acc: 0.7396
+Epoch: 1/300 | Train Loss: 1.9575 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7316 | Test Acc: 0.7438
 Run 3/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9339 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7390 | Test Acc: 0.7525
+Epoch: 1/300 | Train Loss: 1.9541 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7316 | Test Acc: 0.7627
 Run 4/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9481 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0001 | Val Acc: 0.7022 | Test Acc: 0.7401
+Epoch: 1/300 | Train Loss: 1.9512 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7500 | Test Acc: 0.7285
 Run 5/5 on dataset Cora
-Epoch: 1/300 | Train Loss: 1.9680 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0012 | Val Acc: 0.7647 | Test Acc: 0.7447
+Epoch: 1/300 | Train Loss: 1.9545 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7243 | Test Acc: 0.7442
 
-Mean Accuracy over 5 runs: 0.7439, Std Deviation: 0.0131
+Mean Accuracy over 5 runs: 0.7460, Std Deviation: 0.0141
 
 Run 1/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 1.9468 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7279 | Test Acc: 0.7318
+Epoch: 1/300 | Train Loss: 1.9523 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.6949 | Test Acc: 0.7318
 Run 2/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 1.9382 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7169 | Test Acc: 0.7507
+Epoch: 1/300 | Train Loss: 1.9425 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7279 | Test Acc: 0.7548
 Run 3/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 1.9537 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7390 | Test Acc: 0.7516
+Epoch: 1/300 | Train Loss: 1.9620 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0001 | Val Acc: 0.7426 | Test Acc: 0.7488
 Run 4/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 1.9365 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0002 | Val Acc: 0.7243 | Test Acc: 0.7304
+Epoch: 1/300 | Train Loss: 1.9557 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0001 | Val Acc: 0.7500 | Test Acc: 0.7678
 Run 5/5 on dataset CiteSeer
-Epoch: 1/300 | Train Loss: 1.9573 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7096 | Test Acc: 0.7295
+Epoch: 1/300 | Train Loss: 1.9498 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.6912 | Test Acc: 0.7285
 
-Mean Accuracy over 5 runs: 0.7393, Std Deviation: 0.0082
+Mean Accuracy over 5 runs: 0.7478, Std Deviation: 0.0144
 
 Run 1/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9460 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7353 | Test Acc: 0.7622
+Epoch: 1/300 | Train Loss: 1.9713 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0003 | Val Acc: 0.7132 | Test Acc: 0.7322
 Run 2/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9456 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0001 | Val Acc: 0.7132 | Test Acc: 0.7313
+Epoch: 1/300 | Train Loss: 1.9300 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7426 | Test Acc: 0.7613
 Run 3/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9543 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7279 | Test Acc: 0.7705
+Epoch: 1/300 | Train Loss: 1.9706 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.6875 | Test Acc: 0.7318
 Run 4/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9425 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7426 | Test Acc: 0.7525
+Epoch: 1/300 | Train Loss: 1.9516 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0001 | Val Acc: 0.7279 | Test Acc: 0.7567
 Run 5/5 on dataset PubMed
-Epoch: 1/300 | Train Loss: 1.9488 | Val Acc: 0.2904 | Test Acc: 0.3084
-Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7353 | Test Acc: 0.7525
+Epoch: 1/300 | Train Loss: 1.9549 | Val Acc: 0.2904 | Test Acc: 0.3084
+Epoch: 201/300 | Train Loss: 0.0000 | Val Acc: 0.7316 | Test Acc: 0.7659
 
-Mean Accuracy over 5 runs: 0.7530, Std Deviation: 0.0150
+Mean Accuracy over 5 runs: 0.7577, Std Deviation: 0.0053
 
 
 Metapath2vec
