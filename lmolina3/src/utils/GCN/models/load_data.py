@@ -8,7 +8,12 @@ cwd = r'C:\Users\16822\Research Project SER\SEP-NHANES\lmolina3\src\utils\GCN\Da
 
 
 dataset = Planetoid(root=cwd, name='Cora')
-data = dataset[0].to(device)
+dataset1 = Planetoid(root=cwd, name='CiteSeer')
+dataset2 = Planetoid(root = cwd, name= 'PubMed')
+
+datasets = [dataset, dataset1, dataset2]
+
+# data = dataset[0].to(device)
 # print(dataset.num_classes)
 # print(dataset.num_edge_features)
 # print(dataset.num_features)

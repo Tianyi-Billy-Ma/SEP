@@ -1,3 +1,11 @@
-src/utils/metapath2vec/Aminer/processed/data.pt
-src/utils/metapath2vec/Aminer/raw/paper.txt
-src/utils/metapath2vec/Aminer/raw/paper_author.txt
+/src/utils/metapath2vec/Aminer
+/src/utils/GCN/Data/CiteSeer
+/src/utils/GCN/Data/Cora
+/src/utils/GCN/Data/PubMed
+/src/utils/GCN/__pycache__/
+/src/utils/__pycache__/
+/src/utils/Data/Cora
+/src/utils/GCN/Data/
+/src/utils/GCN/data/aminer/
+
+
