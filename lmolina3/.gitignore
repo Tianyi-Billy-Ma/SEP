@@ -7,5 +7,20 @@
 /src/utils/Data/Cora
 /src/utils/GCN/Data/
 /src/utils/GCN/data/aminer/
+/src/utils/Twitter Data/Data/edges.json/
+/src/utils/Twitter Data/Data/labels.json/
+/src/utils/Twitter Data/Data/keyword_embeddings.pkl/
+/src/utils/Twitter Data/Data/tweet_embeddings.pkl/
+/src/utils/Twitter Data/Data/user_embeddings.pkl/
 
-
+/src/utils/metapath2vec/Aminer
+/src/utils/GCN/Data
+/src/utils/GCN/__pycache__/
+/src/utils/__pycache__/
+/src/utils/Data/Cora
+/src/utils/GCN/data/aminer
+/src/utils/Twitter Data/Data/edges.json
+/src/utils/Twitter Data/Data/labels.json
+/src/utils/Twitter Data/Data/keyword_embeddings.pkl
+/src/utils/Twitter Data/Data/tweet_embeddings.pkl
+/src/utils/Twitter Data/Data/user_embeddings.pkl
